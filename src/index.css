@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
+
+  --color-univ-blue: #003366;
+  --color-univ-gold: #FFD700;
+  --color-univ-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.nav-link {
+  @apply text-sm font-medium transition-colors hover:text-univ-gold;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-univ-blue text-white font-bold rounded-sm transition-all hover:opacity-90 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-univ-gold text-univ-blue font-bold rounded-sm transition-all hover:opacity-90 active:scale-95;
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-univ-blue rounded-full;
+}
